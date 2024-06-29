@@ -1,0 +1,99 @@
+Reset margins and paddings
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.Chat-pages {
+    width: 90%;
+    width: 600px;
+    height: 100vh;
+    background-image: url('blackimage.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow of chat messages */
+}
+
+.navbar {
+    background-color: rgb(78, 78, 153);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.navbar h2 {
+    color: white;
+    margin: 0;
+}
+
+.chat {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.firstI, .SecondYOU {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.firstI {
+    background-color: rgb(59, 186, 236);
+    align-self: flex-end; /* Align messages to the right */
+    text-align: right;
+}
+
+.SecondYOU {
+    background-color: rgb(43, 28, 97);
+    align-self: flex-start; /* Align messages to the left */
+}
+
+@media (max-width: 768px) {
+    .Chat-pages {
+        height: 70vh;
+    }
+
+    .navbar h2 {
+        font-size: 1.2em;
+    }
+
+    .firstI, .SecondYOU {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Chat-pages {
+        height: 60vh;
+    }
+
+    .navbar h2 {
+        font-size: 1em;
+    }
+
+    .firstI, .SecondYOU {
+        max-width: 100%;
+    }
+}
